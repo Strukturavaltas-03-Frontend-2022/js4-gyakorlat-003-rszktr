@@ -18,12 +18,14 @@
  * @returns {[{}, {}]} objektumok tömbjével tér vissza
  */
 const getUsers = async (url = '') => {
-    
+  const response = await fetch(`https://nettuts.hu/jms/js4-002/users?limit=5`, { method: 'GET' });
+  const data = await response.json();
+  return data;
 };
 
 /**
  * TODO: exportáld ki helyesen a getUsers függvényt!
  */
 export {
-    
+  getUsers
 }

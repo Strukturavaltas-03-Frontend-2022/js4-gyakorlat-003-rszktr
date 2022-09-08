@@ -13,7 +13,7 @@
  * @returns {[{}, {}]} objektumok tömbjével tér vissza
  */
 const startFetch = async (url = '') => {
-    const response = await fetch('');
+    const response = await fetch(`https://nettuts.hu/jms/js4-002/users?limit=5`, { method: 'GET' });
     const data = await response.json();
     return data;
 };
@@ -23,5 +23,5 @@ const startFetch = async (url = '') => {
  * CSAK A 26. SORBAN DOLGOZZ!
  */
 export {
-    
+    startFetch
 }
