@@ -27,7 +27,21 @@
  * üres tömbbel
  */
 
+const getCustomers = async (url = '') => {
+  try {
+    const response = await fetch(url, { method: 'GET' });
+    const data = await response.json();
+    return data;
+  }
+  catch (error) {
+    console.error(error)
+    return []
+  }
+};
 
 /**
  * TODO: exportáld ki helyesen a getCustomers függvényt!
  */
+export {
+  getCustomers
+}
